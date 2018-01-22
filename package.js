@@ -25,23 +25,3 @@ Package.onUse(function (api) {
   // Exports
   api.export('Restivus', 'server');
 });
-
-
-Package.onTest(function (api) {
-  // Meteor dependencies
-  api.use('practicalmeteor:munit');
-  api.use('test-helpers');
-  api.use('flean:restivus');
-  api.use('http');
-  api.use('coffeescript');
-  api.use('underscore');
-  api.use('accounts-base');
-  api.use('accounts-password');
-  api.use('mongo');
-
-  api.addFiles('lib/route.coffee', 'server');
-  api.addFiles('test/api_tests.coffee', 'server');
-  api.addFiles('test/route_unit_tests.coffee', 'server');
-  api.addFiles('test/authentication_tests.coffee', 'server');
-  api.addFiles('test/user_hook_tests.coffee', 'server');
-});
